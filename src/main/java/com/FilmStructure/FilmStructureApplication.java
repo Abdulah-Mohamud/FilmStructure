@@ -28,7 +28,7 @@ public class FilmStructureApplication {
 
 	@GetMapping("/getfilm")
 	public String workResponse(){
-		Film worker = new Film("Batman","Superhero",2.4,4.7);
+		Film worker = new Film(1201,"Batman","Superhero",2.4,4.7);
 
 		return worker.getFilmInfo();
 	}

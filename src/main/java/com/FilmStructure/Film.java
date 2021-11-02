@@ -6,16 +6,18 @@ import javax.persistence.*;
 @Entity
 public class Film extends FilmCollection{
     @Id
+    @Column(name="filmID")
     @GeneratedValue(strategy= GenerationType.TABLE)
 
-    private String filmID;
+    private int filmID;
     private String title;
     private String genre;
     private Double duration;
     private Double rating;
 
     //Constructor
-    public Film(String title, String genre, Double duration, Double rating){
+    public Film(int filmID, String title, String genre, Double duration, Double rating){
+        this.filmID=filmID;
         this.title=title;
         this.genre=genre;
         this.duration=duration;
@@ -34,9 +36,9 @@ public class Film extends FilmCollection{
         this.title = title;
     }
 
-    public String getFilmID() {return filmID;}
+    //public int getFilmID() {return filmID;}
 
-    public void setFilmID(String filmID) {this.filmID = filmID;}
+  //  public void setFilmID(int filmID) {this.filmID = filmID;}
 
     public String getGenre() {
         return genre;
