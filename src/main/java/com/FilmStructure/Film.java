@@ -14,7 +14,6 @@ public class Film extends FilmCollection{
     private Double duration;
     private Double rating;
 
-
     //Constructor
     public Film(String title, String genre, Double duration, Double rating){
         this.title=title;
